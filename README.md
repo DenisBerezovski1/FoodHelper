@@ -1,6 +1,9 @@
 # FoodHelper
+
 Дипломное андроид приложение. В нём реализованы функции поиска рецептов, отображения популярных, составления плана на неделю или день из рецептов,
 отображения инструкции приготовления, подсчёт нутрициологических свойств рецепта.
+
+
 ![0menu](https://github.com/DenisBerezovski1/FoodHelper/assets/119109483/ad92f21b-7f00-4857-95b3-937d20008752)
 ![1Breakfast](https://github.com/DenisBerezovski1/FoodHelper/assets/119109483/83cad097-0b2e-4e13-aefa-42f9c1b8f1b3)
 ![2Brunch](https://github.com/DenisBerezovski1/FoodHelper/assets/119109483/78ac6211-083a-4388-95ea-51689980200e)
