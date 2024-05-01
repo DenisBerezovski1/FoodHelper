@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".user_page.UserFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/emptyLottieView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty_red" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadLottieView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/empty_red" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/currentConstr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/current_plan_background"
+        android:visibility="gone"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/plansTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <TextView
+            android:id="@+id/currentPlanTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_meal_plan_for"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_header3"
+            app:layout_constraintBottom_toBottomOf="@id/daysSpinner"
+            app:layout_constraintEnd_toStartOf="@id/daysSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/daysSpinner" />
+
+        <Spinner
+            android:id="@+id/daysSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_background"
+            android:scrollbarSize="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/currentPlanTv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentPlanNameTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="2dp"
+            android:textAlignment="center"
+            android:textColor="@color/very_dark_red"
+            android:textSize="@dimen/text_size_header2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentPlanTv"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <View
+            android:id="@+id/delimetr1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark_red"
+            app:layout_constraintTop_toBottomOf="@+id/currentPlanNameTv" />
+
+        <TextView
+            android:id="@+id/mealPlanNutrientsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/mealPlanNutrientsTv"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_normal2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delimetr1" />
+
+        <TextView
+            android:id="@+id/caloriesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/caloriesTv"
+            android:textSize="@dimen/text_size_small1"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mealPlanNutrientsTv" />
+
+        <TextView
+            android:id="@+id/caloriesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toEndOf="@+id/caloriesTv"
+            app:layout_constraintTop_toTopOf="@+id/caloriesTv" />
+
+        <TextView
+            android:id="@+id/carbohydratesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/carbohydratesTv"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toStartOf="@+id/caloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/caloriesTv" />
+
+        <TextView
+            android:id="@+id/carbohydratesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toEndOf="@+id/carbohydratesTv"
+            app:layout_constraintTop_toBottomOf="@+id/caloriesTv" />
+
+        <TextView
+            android:id="@+id/fatTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fatTv"
+            android:textSize="@dimen/text_size_small1"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="@+id/caloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/carbohydratesTv" />
+
+        <TextView
+            android:id="@+id/fatAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toEndOf="@+id/fatTv"
+            app:layout_constraintTop_toBottomOf="@+id/carbohydratesTv" />
+
+        <TextView
+            android:id="@+id/proteinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proteinTv"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toStartOf="@+id/caloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/fatTv" />
+
+        <TextView
+            android:id="@+id/proteinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toEndOf="@+id/proteinTv"
+            app:layout_constraintTop_toBottomOf="@+id/fatTv" />
+
+        <View
+            android:id="@+id/delimetr2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark_red"
+            app:layout_constraintTop_toBottomOf="@+id/proteinAmount"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCurrentMeals"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.45"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/delimetr2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/plansTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/all_your_plans"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_header3"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rvPlansList"
+        app:layout_constraintTop_toBottomOf="@id/currentConstr" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlansList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plansTv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

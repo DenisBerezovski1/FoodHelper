@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">Food Helper</string>
+    <string name="socketTimeout">Internet error</string>
+    <string name="exception">Unknown error</string>
+    <string name="breakfastTv">Best for breakfast</string>
+    <string name="brunchTv">Best for brunch</string>
+    <string name="lunchTv">Best for lunch</string>
+    <string name="dinnerTv">Best for dinner</string>
+    <string-array name="meals">
+        <item>Breakfast</item>
+        <item>Brunch</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+    <string name="searchBt">Search</string>
+    <string name="equipmentTv">Equipment</string>
+    <string name="ingredientTv">Ingredients</string>
+    <string name="nutritionBt">Count nutrition</string>
+    <string name="userBt">User</string>
+    <string name="addTemplateBt">Add meal</string>
+    <string name="nutrientsHeader">Nutrient name</string>
+    <string name="amountHeader">Amount</string>
+    <string name="percentHeader">Percent of daily need</string>
+    <string name="nutrientsAbout1">Nutrients are the substances found in food which drive biological activity, and are essential for the human body. They are categorized as proteins, fats, carbohydrates (sugars, dietary fiber), vitamins, and minerals, and perform the following vital functions.</string>
+    <string name="nutrientsAbout2">To read more about nutrients click on the link</string>
+    <string name="nutrientsurl">https://www.healthline.com/health/food-nutrition/six-essential-nutrients</string>
+    <string name="planNameTv">Choose meal plan name</string>
+    <string name="plan_name">plan name…</string>
+    <string-array name="timeFrame">
+        <item>day</item>
+        <item>week</item>
+    </string-array>
+    <string name="timeFrameTv">Time frame: week</string>
+    <string name="filters">Choose filters</string>
+    <string name="targetCaloriesHint">calories…</string>
+    <string name="targetCaloriesTv">Set target calories</string>
+    <string name="dietBt">Diet</string>
+    <string name="dietTv">Choose diet</string>
+    <string name="excludeHint">exclude products…</string>
+    <string-array name="diets">
+        <item>Gluten Free</item>
+        <item>Ketogenic</item>
+        <item>Vegetarian</item>
+        <item>Lacto-Vegetarian</item>
+        <item>Ovo-Vegetarian</item>
+        <item>Vegan</item>
+        <item>Pescetarian</item>
+        <item>Paleo</item>
+        <item>Primal</item>
+        <item>Low FODMAP</item>
+        <item>Whole30</item>
+    </string-array>
+    <string name="excludeTv">Choose products to exclude</string>
+    <string name="meal_image">meal Image</string>
+    <string name="getPlanBt">Get Meal Plan</string>
+    <string name="servingTv">Serving portions</string>
+    <string name="readyImMinutesTv">Ready in: </string>
+    <string name="mealPlanNutrientsTv">Meal Plan Nutrients</string>
+    <string name="caloriesTv">Calories:  </string>
+    <string name="carbohydratesTv">Carbohydrates:  </string>
+    <string name="fatTv">Fat:  </string>
+    <string name="proteinTv">Protein:  </string>
+    <string name="title_home">meals</string>
+    <string-array name="days">
+        <item>today</item>
+        <item>monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>friday</item>
+        <item>saturday</item>
+        <item>sunday</item>
+    </string-array>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="add_plan_Bt">Add Plan</string>
+    <string name="plans_menu">plans</string>
+    <string name="set_current_bt">Set current</string>
+    <string name="change">Change</string>
+    <string name="all_your_plans">All your plans:</string>
+    <string name="current_meal_plan_for">Current Meal Plan</string>
+    <string name="filtersTv">Filters</string>
+    <string name="cuisine">Cuisine</string>
+    <string name="intolerances">Intolerances</string>
+    <string-array name="cuisines">
+        <item>African</item>
+        <item>American</item>
+        <item>British</item>
+        <item>Chinese</item>
+        <item>European</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Indian</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Jewish</item>
+        <item>Korean</item>
+        <item>Mexican</item>
+        <item>Spanish</item>
+        <item>Thai</item>
+    </string-array>
+    <string-array name="intolerances">
+        <item>Dairy</item>
+        <item>Egg</item>
+        <item>Gluten</item>
+        <item>Grain</item>
+        <item>Peanut</item>
+        <item>Seafood</item>
+        <item>Sesame</item>
+        <item>Shellfish</item>
+        <item>Soy</item>
+        <item>Sulfite</item>
+        <item>Tree Nut</item>
+        <item>Wheat</item>
+    </string-array>
+</resources>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    tools:context=".generate_plan_page.GeneratePlanFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintTop_toBottomOf="@id/getPlanBt"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/processing_order" />
+
+        <TextView
+            android:id="@+id/planNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/planNameTv"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_header3"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/planNameEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/plan_name"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:textColor="@color/gray"
+            android:textColorHighlight="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_header3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/planNameTv"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <View
+            android:id="@+id/delimetr"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/dark_red"
+            app:layout_constraintTop_toBottomOf="@+id/planNameEdit" />
+
+        <TextView
+            android:id="@+id/filtersTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/filters"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delimetr" />
+
+        <TextView
+            android:id="@+id/timeFrameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/timeFrameTv"
+            android:textSize="@dimen/text_size_small1"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filtersTv" />
+
+        <TextView
+            android:id="@+id/targetCaloriesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/targetCaloriesTv"
+            android:textSize="@dimen/text_size_small1"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/targetCaloriesEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/targetCaloriesEdit" />
+
+        <EditText
+            android:id="@+id/targetCaloriesEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="number"
+            android:hint="@string/targetCaloriesHint"
+            android:inputType="number"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_normal2"
+            app:layout_constraintStart_toEndOf="@+id/targetCaloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/timeFrameTv"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/dietTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dietTv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintBottom_toBottomOf="@+id/dietBt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dietBt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dietBt"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/round_button"
+            android:text="@string/dietBt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small2"
+            app:layout_constraintStart_toEndOf="@+id/dietTv"
+            app:layout_constraintTop_toBottomOf="@+id/targetCaloriesEdit" />
+
+        <TextView
+            android:id="@+id/selectedDietTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintBottom_toBottomOf="@+id/dietBt"
+            app:layout_constraintStart_toEndOf="@+id/dietBt"
+            app:layout_constraintTop_toTopOf="@+id/dietBt" />
+
+        <TextView
+            android:id="@+id/excludeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/excludeTv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintBottom_toBottomOf="@+id/excludeEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/excludeEdit" />
+
+        <EditText
+            android:id="@+id/excludeEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/excludeHint"
+            android:inputType="text"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/excludeTv"
+            app:layout_constraintTop_toBottomOf="@+id/dietBt" />
+
+        <View
+            android:id="@+id/delimetr2"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/dark_red"
+            app:layout_constraintTop_toBottomOf="@+id/excludeEdit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addPlanBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_button"
+            android:text="@string/add_plan_Bt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small2"
+            app:layout_constraintEnd_toStartOf="@id/getPlanBt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delimetr2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getPlanBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_button"
+            android:text="@string/getPlanBt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delimetr2" />
+
+        <Spinner
+            android:id="@+id/daysSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/getPlanBt"
+            app:layout_constraintTop_toBottomOf="@+id/delimetr2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMealPlanList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/getPlanBt" />
+
+        <TextView
+            android:id="@+id/mealPlanNutrientsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/mealPlanNutrientsTv"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_normal2"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvMealPlanList" />
+
+        <TextView
+            android:id="@+id/caloriesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/caloriesTv"
+            android:textSize="@dimen/text_size_small1"
+            android:textColor="@color/gray"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mealPlanNutrientsTv" />
+
+        <TextView
+            android:id="@+id/caloriesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toEndOf="@+id/caloriesTv"
+            app:layout_constraintTop_toTopOf="@+id/caloriesTv" />
+
+        <TextView
+            android:id="@+id/carbohydratesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/carbohydratesTv"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/caloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/caloriesTv" />
+
+        <TextView
+            android:id="@+id/carbohydratesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small1"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/carbohydratesTv"
+            app:layout_constraintTop_toBottomOf="@+id/caloriesTv" />
+
+        <TextView
+            android:id="@+id/fatTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fatTv"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/caloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/carbohydratesTv" />
+
+        <TextView
+            android:id="@+id/fatAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small1"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/fatTv"
+            app:layout_constraintTop_toBottomOf="@+id/carbohydratesTv" />
+
+        <TextView
+            android:id="@+id/proteinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/proteinTv"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_small1"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/caloriesTv"
+            app:layout_constraintTop_toBottomOf="@+id/fatTv" />
+
+        <TextView
+            android:id="@+id/proteinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_small1"
+            app:layout_constraintStart_toEndOf="@+id/proteinTv"
+            app:layout_constraintTop_toBottomOf="@+id/fatTv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

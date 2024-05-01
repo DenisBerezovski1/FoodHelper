@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.foodhelper.main_page.FoodMainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_searchFoodFragment"
+            app:destination="@id/searchFoodFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_generatePlanFragment"
+            app:destination="@id/generatePlanFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFoodFragment"
+        android:name="com.example.foodhelper.search_page.SearchFoodFragment"
+        android:label="fragment_search_food"
+        tools:layout="@layout/fragment_search_food" >
+        <action
+            android:id="@+id/action_searchFoodFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.example.foodhelper.recipe_page.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe">
+        <argument
+            android:name="foodId"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="recipeName"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_recipeFragment_to_nutritionFragment"
+            app:destination="@id/nutritionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutritionFragment"
+        android:name="com.example.foodhelper.nutrition_page.NutritionFragment"
+        android:label="fragment_nutrition"
+        tools:layout="@layout/fragment_nutrition">
+        <argument
+            android:name="foodId"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="recipeName"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.foodhelper.user_page.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatePlanFragment"
+        android:name="com.example.foodhelper.generate_plan_page.GeneratePlanFragment"
+        android:label="fragment_generate_plan"
+        tools:layout="@layout/fragment_generate_plan" >
+        <action
+            android:id="@+id/action_generatePlanFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+
+</navigation>
